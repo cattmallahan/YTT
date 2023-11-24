@@ -90,6 +90,7 @@
                           fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
                           asyncCall2();
                           urlreader();
+                          gettime();
 
                       }
 
@@ -107,7 +108,14 @@
                       }
                     }
 
-
+function gettime() {
+console.log('gettime ran');
+ var time2 = player.playerInfo.currentTime;
+ var videolength2 = player.getDuration();
+ var percentprogress = Number(time2/videolength2).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
+ document.getElementById("timediv").style.left = percentprogress;
+ window.setInterval(gettime, 1000);
+}
 
 
                     function increase() {
