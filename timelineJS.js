@@ -645,13 +645,7 @@
 
 
 
-window.onload = function gettime() {
- var time2 = player.playerInfo.currentTime;
- var videolength2 = player.getDuration();
- var percentprogress = Number(time2/videolength2).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
- document.getElementById("timediv").style.left = percentprogress;
- window.setInterval(gettime, 1000);
-}
+
 
 
 
