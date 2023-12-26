@@ -146,6 +146,8 @@
                       document.getElementById('bpm').innerHTML = bpm;
                       setdifference();
                       checkpositive();
+                      player.setPlaybackRate(rate);
+
                       //player.seekTo(section.start);
                       //var duration = (section.end - section.start)/(rate) + difference;
                       //clearTimeout(timeout);
@@ -176,6 +178,7 @@
                         document.getElementById('bpm').innerHTML = bpm;
                         setdifference();
                         checkpositive();
+                        player.setPlaybackRate(rate);
                         //player.seekTo(section.start);
                         //var duration = (section.end - section.start)/(rate) + difference;
                        // clearTimeout(timeout);
