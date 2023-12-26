@@ -447,7 +447,7 @@
                   function updatestartend(from, to) {
                       section.start = from;
                       section.end = to;
-                      //player.seekTo(section.start);
+                      player.seekTo(section.start);
                      // var duration = (section.end - section.start)/(rate) + difference;
                      // clearTimeout(timeout);
                      // timeout = setTimeout(restartVideoSection, duration * 1000);
