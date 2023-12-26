@@ -144,8 +144,8 @@
                       checkpositive();
                       player.seekTo(section.start);
                       var duration = (section.end - section.start)/(rate) + difference;
-                      clearTimeout(timeout);
-                      timeout = setTimeout(restartVideoSection, duration * 1000);
+                      //clearTimeout(timeout);
+                      //timeout = setTimeout(restartVideoSection, duration * 1000);
                     //  document.getElementById('duration').innerHTML = duration;
                   //    document.getElementById('rate').innerHTML = rate;
                     } else if(bpm < 0 && bpm > -57 && loopstate==2){
@@ -157,7 +157,7 @@
                       player.setPlaybackRate(rate);
 
                       checkpositive();
-                      clearTimeout(timeout);
+                     // clearTimeout(timeout);
 
                 }
                     }
@@ -174,7 +174,7 @@
                         checkpositive();
                         player.seekTo(section.start);
                         var duration = (section.end - section.start)/(rate) + difference;
-                        clearTimeout(timeout);
+                       // clearTimeout(timeout);
                         timeout = setTimeout(restartVideoSection, duration * 1000);
 
                       } else if (bpm <= 0 && bpm > -53 && loopstate==2){
@@ -185,7 +185,7 @@
                         player.setPlaybackRate(rate);
 
                         checkpositive();
-                        clearTimeout(timeout);
+                       // clearTimeout(timeout);
 
 
 
@@ -197,8 +197,8 @@
                     //  document.getElementById('addduration').innerHTML = difference;
                       player.seekTo(section.start);
                       var duration = (section.end - section.start)/(rate) + difference;
-                      clearTimeout(timeout);
-                      timeout = setTimeout(restartVideoSection, duration * 1000);
+                     // clearTimeout(timeout);
+                     // timeout = setTimeout(restartVideoSection, duration * 1000);
 
                     }
 
@@ -207,8 +207,8 @@
                     //  document.getElementById('addduration').innerHTML = difference;
                       player.seekTo(section.start);
                       var duration = (section.end - section.start)/(rate) + difference;
-                      clearTimeout(timeout);
-                      timeout = setTimeout(restartVideoSection, duration * 1000);
+                     // clearTimeout(timeout);
+                     // timeout = setTimeout(restartVideoSection, duration * 1000);
 
                     }
 
@@ -224,22 +224,22 @@
                   function restartVideoSection() {
                     player.seekTo(section.start);
                     var duration = (section.end - section.start)/(rate) + difference;
-                      clearTimeout(timeout);
-                      timeout = setTimeout(restartVideoSection, duration * 1000);
+                      //clearTimeout(timeout);
+                     // timeout = setTimeout(restartVideoSection, duration * 1000);
                   }
 
                     function playbutton() {
                           player.playVideo();
                           player.seekTo(section.start);
                           var duration = (section.end - section.start)/(rate) + difference;
-                          clearTimeout(timeout);
+                         // clearTimeout(timeout);
 
-                      timeout = setTimeout(restartVideoSection, duration * 1000);
+                    //  timeout = setTimeout(restartVideoSection, duration * 1000);
                       }
 
                     function pausebutton() {
                           player.pauseVideo();
-                          clearTimeout(timeout);
+                         // clearTimeout(timeout);
                       }
 
 
@@ -445,8 +445,8 @@
                       section.end = to;
                       player.seekTo(section.start);
                       var duration = (section.end - section.start)/(rate) + difference;
-                      clearTimeout(timeout);
-                      timeout = setTimeout(restartVideoSection, duration * 1000);
+                     // clearTimeout(timeout);
+                     // timeout = setTimeout(restartVideoSection, duration * 1000);
                       fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
 
 
@@ -455,7 +455,7 @@
                       section.start = from;
                       section.end = to;
                       var duration = (section.end - section.start)/(rate) + difference;
-                      clearTimeout(timeout);
+                    //  clearTimeout(timeout);
 
                       fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
 
@@ -615,8 +615,8 @@
                     section.start = (player.playerInfo.currentTime - 0.10436075);
                     console.log(section.start);
                     var duration = (section.end - section.start)/(rate) + difference;
-                    clearTimeout(timeout);
-                    timeout = setTimeout(restartVideoSection, duration * 1000);
+                    //clearTimeout(timeout);
+                    //timeout = setTimeout(restartVideoSection, duration * 1000);
                     updatesliders()
                     fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
                     loopstate = 1;
@@ -632,8 +632,8 @@
                     console.log(section.end);
                     player.seekTo(section.start);
                     var duration = (section.end - section.start)/(rate) + difference;
-                    clearTimeout(timeout);
-                    timeout = setTimeout(restartVideoSection, duration * 1000);
+                    //clearTimeout(timeout);
+                    //timeout = setTimeout(restartVideoSection, duration * 1000);
                     updatesliders();
                     fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
                     loopstate = 1;
