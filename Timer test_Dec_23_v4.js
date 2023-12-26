@@ -111,9 +111,10 @@
                     }
 
                     function gettime() {
+                      console.log(time);
                       var time = player.playerInfo.currentTime;
                       var videolength = player.getDuration();
-                      
+                      console.log(time);
                     
                       var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
                       document.getElementById("timediv").style.left = percentprogress;
@@ -198,8 +199,8 @@
                     function increaseduration() {
                       difference += .05;
                     //  document.getElementById('addduration').innerHTML = difference;
-                      player.seekTo(section.start);
-                      var duration = (section.end - section.start)/(rate) + difference;
+                      //player.seekTo(section.start);
+                     // var duration = (section.end - section.start)/(rate) + difference;
                      // clearTimeout(timeout);
                      // timeout = setTimeout(restartVideoSection, duration * 1000);
 
@@ -208,8 +209,8 @@
                     function decreaseduration() {
                       difference -= .05;
                     //  document.getElementById('addduration').innerHTML = difference;
-                      player.seekTo(section.start);
-                      var duration = (section.end - section.start)/(rate) + difference;
+                      //player.seekTo(section.start);
+                      //var duration = (section.end - section.start)/(rate) + difference;
                      // clearTimeout(timeout);
                      // timeout = setTimeout(restartVideoSection, duration * 1000);
 
@@ -226,15 +227,15 @@
 
                   function restartVideoSection() {
                     player.seekTo(section.start);
-                    var duration = (section.end - section.start)/(rate) + difference;
+                    //var duration = (section.end - section.start)/(rate) + difference;
                       //clearTimeout(timeout);
                      // timeout = setTimeout(restartVideoSection, duration * 1000);
                   }
 
                     function playbutton() {
                           player.playVideo();
-                          player.seekTo(section.start);
-                          var duration = (section.end - section.start)/(rate) + difference;
+                         // player.seekTo(section.start);
+                        //  var duration = (section.end - section.start)/(rate) + difference;
                          // clearTimeout(timeout);
 
                     //  timeout = setTimeout(restartVideoSection, duration * 1000);
@@ -446,8 +447,8 @@
                   function updatestartend(from, to) {
                       section.start = from;
                       section.end = to;
-                      player.seekTo(section.start);
-                      var duration = (section.end - section.start)/(rate) + difference;
+                      //player.seekTo(section.start);
+                     // var duration = (section.end - section.start)/(rate) + difference;
                      // clearTimeout(timeout);
                      // timeout = setTimeout(restartVideoSection, duration * 1000);
                       fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
@@ -457,7 +458,7 @@
                   function updatestartendkeepplaying(from, to) {
                       section.start = from;
                       section.end = to;
-                      var duration = (section.end - section.start)/(rate) + difference;
+                      //var duration = (section.end - section.start)/(rate) + difference;
                     //  clearTimeout(timeout);
 
                       fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
@@ -633,8 +634,8 @@
                     console.log(section.end);
                     section.end = (player.playerInfo.currentTime - 0.28982475);
                     console.log(section.end);
-                    player.seekTo(section.start);
-                    var duration = (section.end - section.start)/(rate) + difference;
+                    player.seekTo(section.end-.02);
+                    //var duration = (section.end - section.start)/(rate) + difference;
                     //clearTimeout(timeout);
                     //timeout = setTimeout(restartVideoSection, duration * 1000);
                     updatesliders();
