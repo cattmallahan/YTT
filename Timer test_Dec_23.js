@@ -120,7 +120,7 @@
                         console.log('restarttriggered');
 
                         //&& state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3
-                        restartVideoSection;
+                        restartVideoSection();
                       }
                       window.setInterval(gettime, 10);
 
