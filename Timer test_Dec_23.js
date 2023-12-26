@@ -86,6 +86,7 @@
 
                           player.seekTo(section.start);
                           getduration();
+                          gettime();
                           checkpositive();
                           playbutton();
                           document.getElementById('bpm').innerHTML = bpm;
@@ -100,7 +101,7 @@
                           console.log(state);
                           player.setPlaybackRate(rate);     // choose .25, .50, .75, or 1
                           var duration = (section.end - section.start)/(rate) + difference;
-                          gettime();
+                      
                           //clearTimeout(timeout);
                           //timeout = setTimeout(restartVideoSection, duration * 1000);
                       } else {
