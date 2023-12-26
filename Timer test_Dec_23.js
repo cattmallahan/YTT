@@ -115,7 +115,9 @@
                     
                       var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});;
                       document.getElementById("timediv").style.left = percentprogress;
-                      if (time >= section.end && state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
+                      if (time >= section.end ){
+
+                        //&& state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3
                         restartVideoSection;
                       }
                       window.setInterval(gettime, 10);
