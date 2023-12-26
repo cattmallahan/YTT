@@ -287,7 +287,7 @@
                   }
 
 
-                  function skipforward () {
+                  function skipforward() {
                     difference = (section.end-section.start);
                     var videolength = player.getDuration();
 
