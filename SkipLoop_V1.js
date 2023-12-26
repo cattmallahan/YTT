@@ -374,7 +374,7 @@
 
 
 
-                  }
+            
 
 
                   function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
