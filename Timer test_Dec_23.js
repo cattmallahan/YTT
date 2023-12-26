@@ -111,6 +111,7 @@
                     }
 
                     function gettime() {
+                      console.log(time);
                       var time = player.playerInfo.currentTime;
                       var videolength = player.getDuration();
                       console.log(time);
@@ -122,8 +123,10 @@
 
                         //&& state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3
                         restartVideoSection();
+                      } else {
+
                       }
-                      window.setInterval(gettime, 10);
+                      setTimeout(gettime, 10);
 
                       }
 
