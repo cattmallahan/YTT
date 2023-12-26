@@ -111,13 +111,14 @@
                     }
 
                     function gettime() {
-                      console.log(time);
+                      console.log('gettime start');
                       var time = player.playerInfo.currentTime;
                       var videolength = player.getDuration();
-                      console.log(time);
+                      
                     
                       var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
                       document.getElementById("timediv").style.left = percentprogress;
+                      console.log('gettimemid');
                       if (time >= section.end ){
                         console.log('restarttriggered');
 
