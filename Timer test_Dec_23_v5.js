@@ -146,8 +146,8 @@
                       document.getElementById('bpm').innerHTML = bpm;
                       setdifference();
                       checkpositive();
-                      player.seekTo(section.start);
-                      var duration = (section.end - section.start)/(rate) + difference;
+                      //player.seekTo(section.start);
+                      //var duration = (section.end - section.start)/(rate) + difference;
                       //clearTimeout(timeout);
                       //timeout = setTimeout(restartVideoSection, duration * 1000);
                     //  document.getElementById('duration').innerHTML = duration;
@@ -176,10 +176,10 @@
                         document.getElementById('bpm').innerHTML = bpm;
                         setdifference();
                         checkpositive();
-                        player.seekTo(section.start);
-                        var duration = (section.end - section.start)/(rate) + difference;
+                        //player.seekTo(section.start);
+                        //var duration = (section.end - section.start)/(rate) + difference;
                        // clearTimeout(timeout);
-                        timeout = setTimeout(restartVideoSection, duration * 1000);
+                        //timeout = setTimeout(restartVideoSection, duration * 1000);
 
                       } else if (bpm <= 0 && bpm > -53 && loopstate==2){
                         console.log('decrease no loop');
