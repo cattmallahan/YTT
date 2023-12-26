@@ -112,10 +112,12 @@
                     function gettime() {
                       var time = player.playerInfo.currentTime;
                       var videolength = player.getDuration();
+                      console.log(time);
                     
                       var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});;
                       document.getElementById("timediv").style.left = percentprogress;
                       if (time >= section.end ){
+                        console.log('restarttriggered');
 
                         //&& state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3
                         restartVideoSection;
