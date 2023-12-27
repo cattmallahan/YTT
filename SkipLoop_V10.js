@@ -326,7 +326,7 @@
                     }
                      clearTimeout(timeout);
                      player.seekTo(section.start);
-
+                    console.log('gettimepre-run')
                      gettime();
 
                   
