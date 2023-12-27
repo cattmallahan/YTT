@@ -326,7 +326,11 @@
 
                     }
                     
+                    var time = player.playerInfo.currentTime;
+                      var videolength = player.getDuration();
                     
+                      var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
+                      document.getElementById("timediv").style.left = percentprogress;
 
 
                   }
@@ -342,8 +346,7 @@
 
                       section.start = (section.start-difference);
                       player.seekTo(section.start);
-                      section.end = (section.end-difference);
-  
+              
                       frombutton = section.start;
                       parsedbutton = parseFloat(frombutton);
                       frombutton = parsedbutton.toString(10);
@@ -352,7 +355,7 @@
 
                       console.log('skipranfrombutton');
   
-  
+                      section.end = (section.end-difference);
                       tobutton = section.end;
                       parsedtobutton = parseFloat(tobutton);
                       tobutton = parsedtobutton.toString(10);
@@ -371,6 +374,11 @@
 
                     }
                     
+                    var time = player.playerInfo.currentTime;
+                      var videolength = player.getDuration();
+                    
+                      var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
+                      document.getElementById("timediv").style.left = percentprogress;
 
 
                     
