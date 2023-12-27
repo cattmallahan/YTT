@@ -340,9 +340,9 @@
 
                     if (section.start>difference){  
 
-                      section.start = (section.start-(difference));
+                      section.start = (section.start-difference);
                       player.seekTo(section.start);
-                      section.end = (section.end-(difference));
+                      section.end = (section.end-difference);
   
                       frombutton = section.start;
                       parsedbutton = parseFloat(frombutton);
@@ -354,9 +354,11 @@
   
   
                       tobutton = section.end;
-                      parsedbutton = parseFloat(tobutton);
-                      tobutton = parsedbutton.toString(10);
+                      parsedtobutton = parseFloat(tobutton);
+                      tobutton = parsedtobutton.toString(10);
                       document.getElementById('toInput').value = tobutton;
+                      console.log(tobutton)
+                      console.log(document.getElementById('toInput').value)
                       controlToInput(toSlider, fromInput, toInput, toSlider);
                       console.log('skiprantobutton');
 
