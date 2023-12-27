@@ -49,7 +49,7 @@
                   })
 
 
-                  fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
+                  fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                   setToggleAccessible(toSlider);
 
                   fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
@@ -93,7 +93,7 @@
                           gettime();
                           playbutton();
                           document.getElementById('bpm').innerHTML = bpm;
-                          fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
+                          fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                           asyncCall2();
 
                       }
@@ -392,7 +392,7 @@
                     var videolength = player.getDuration();
                     var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
                     document.getElementById("timediv").style.left = percentprogress;
-                    document.getElementById("timeSlider").value =  time;   
+                    document.getElementById("timeSlider").value = section.start;   
 
 
                   }
@@ -422,7 +422,7 @@
 
                   function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
                       const [from, to] = getParsed(fromInput, toInput);
-                      fillSlider(fromInput, toInput, '#DDA9EF', '#533967', controlSlider);
+                      fillSlider(fromInput, toInput, '#C1C1C1', '#EB3323', controlSlider);
                       if (from > to) {
                           fromSlider.value = to;
                           fromInput.value = to;
@@ -434,7 +434,7 @@
 
                   function controlToInput(toSlider, fromInput, toInput, controlSlider) {
                       const [from, to] = getParsed(fromInput, toInput);
-                      fillSlider(fromInput, toInput, '#DDA9EF', '#533967', controlSlider);
+                      fillSlider(fromInput, toInput, '#C1C1C1', '#EB3323', controlSlider);
                       setToggleAccessible(toInput);
                       if (from <= to) {
                           toSlider.value = to;
@@ -447,7 +447,7 @@
 
                   function controlFromSlider(fromSlider, toSlider, fromInput) {
                     const [from, to] = getParsed(fromSlider, toSlider);
-                    fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
+                    fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                     if (from > to) {
                       fromSlider.value = to;
                       fromInput.value = to;
@@ -466,7 +466,7 @@
 
                   function controlFromSliderkeepplaying(fromSlider, toSlider, fromInput) {
                     const [from, to] = getParsed(fromSlider, toSlider);
-                    fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
+                    fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                     if (from > to) {
                       fromSlider.value = to;
                       fromInput.value = to;
@@ -484,7 +484,7 @@
 
                   function controlToSlider(fromSlider, toSlider, toInput) {
                     const [from, to] = getParsed(fromSlider, toSlider);
-                    fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
+                    fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                     setToggleAccessible(toSlider);
                     if (from <= to) {
                       toSlider.value = to;
@@ -546,7 +546,7 @@
                      // var duration = (section.end - section.start)/(rate) + difference;
                      // clearTimeout(timeout);
                      // timeout = setTimeout(restartVideoSection, duration * 1000);
-                      fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
+                      fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
 
 
 
@@ -558,7 +558,7 @@
                       //var duration = (section.end - section.start)/(rate) + difference;
                     //  clearTimeout(timeout);
 
-                      fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
+                      fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
 
 
 
@@ -721,7 +721,7 @@
                     //clearTimeout(timeout);
                     //timeout = setTimeout(restartVideoSection, duration * 1000);
                     updatesliders()
-                    fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
+                    fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                     loopstate = 1;
 
 
@@ -738,7 +738,7 @@
                     //clearTimeout(timeout);
                     //timeout = setTimeout(restartVideoSection, duration * 1000);
                     updatesliders();
-                    fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
+                    fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                     loopstate = 1;
 
 
