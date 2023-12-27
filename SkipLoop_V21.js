@@ -118,6 +118,7 @@
                     
                       var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
                       document.getElementById("timediv").style.left = percentprogress;
+                      document.getElementById("timeSlider").value = time;
                       if (time >= section.end ){
                         console.log('restarttriggered');
 
@@ -252,6 +253,7 @@
                     document.getElementById('toInput').max = videolength;
                     document.getElementById('fromSlider').max = videolength;
                     document.getElementById('fromInput').max = videolength;
+                    document.getElementById('timeSlider').max = videolength;
                   }
 
 
@@ -270,7 +272,10 @@
                     document.getElementById('fromInput').max = videolength;
                     document.getElementById('fromSlider').value = 0;
                     document.getElementById('fromInput').value = 0;
+              
                     controlFromSlider(fromSlider, toSlider, fromInput);
+                    document.getElementById('timeSlider').max = videolength;
+
                   }
 
                   function reloadloop() {
@@ -286,6 +291,8 @@
                     document.getElementById('fromSlider').value = 0;
                     document.getElementById('fromInput').value = 0;
                     controlFromSliderkeepplaying(fromSlider, toSlider, fromInput);
+                    document.getElementById('timeSlider').max = videolength;
+
                     loopstate = 2;
                   }
 
