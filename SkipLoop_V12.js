@@ -326,7 +326,7 @@
                     }
                      clearTimeout(timeout);
                      player.seekTo(section.start);
-                     
+
                      var time = section.start;
                      var videolength = player.getDuration();
                      var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
@@ -508,6 +508,11 @@
                      // timeout = setTimeout(restartVideoSection, duration * 1000);
                       fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
 
+                      var time = section.start;
+                      var videolength = player.getDuration();
+                      var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
+                      document.getElementById("timediv").style.left = percentprogress;  
+
 
                   }
                   function updatestartendkeepplaying(from, to) {
@@ -517,6 +522,11 @@
                     //  clearTimeout(timeout);
 
                       fillSlider(fromSlider, toSlider, '#DDA9EF', '#533967', toSlider);
+
+                      var time = section.start;
+                      var videolength = player.getDuration();
+                      var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
+                      document.getElementById("timediv").style.left = percentprogress;  
 
 
                   }
