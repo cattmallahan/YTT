@@ -77,6 +77,12 @@
                         height: '506',
                         width: '900',
                         videoId: 'qybUFnY7Y8w',
+                        playerVars: { 
+                          'autoplay': 1,
+                          'controls': 0, 
+                          'rel' : 0,
+                          'fs' : 0,
+                      }
                         events: {
                           'onReady': onPlayerReady,
                           'onStateChange': onPlayerStateChange
