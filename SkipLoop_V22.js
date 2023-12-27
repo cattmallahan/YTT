@@ -403,6 +403,13 @@
                     console.log(seektime);
                     player.seekTo(seektime);
 
+                    if(seektime>section.end || seektime<section.start){
+
+                      reloadloop();
+
+
+                    }
+
 
 
 
