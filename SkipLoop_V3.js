@@ -126,7 +126,10 @@
                       } else {
 
                       }
-                      setTimeout(gettime, 10);
+                      if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
+                        setTimeout(gettime, 10);
+
+                      }
 
                       }
 
