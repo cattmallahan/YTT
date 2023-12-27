@@ -451,7 +451,7 @@
 
                       moveplayheadwhenpaused();
                     
-                 // }
+                 }
 
                   function controlToSlider(fromSlider, toSlider, toInput) {
                     const [from, to] = getParsed(fromSlider, toSlider);
