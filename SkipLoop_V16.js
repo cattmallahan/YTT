@@ -445,13 +445,13 @@
                     }
                     updatestartendkeepplaying(from, to);
 
-                    if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
+                    //if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
                       
-                    } else if (state === 2){
+                   // } else if (state === 2){
 
                       moveplayheadwhenpaused();
-                    }
-                  }
+                    
+                 // }
 
                   function controlToSlider(fromSlider, toSlider, toInput) {
                     const [from, to] = getParsed(fromSlider, toSlider);
