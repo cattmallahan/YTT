@@ -57,6 +57,8 @@
                   fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
                   toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
 
+                  timeSlider.oninput = () => controlTimeSlider();
+
                   document.getElementById('duration').innerHTML = duration;
                   document.getElementById('rate').innerHTML = rate;
 
@@ -383,6 +385,17 @@
                     var videolength = player.getDuration();
                     var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
                     document.getElementById("timediv").style.left = percentprogress;   
+
+
+                  }
+
+
+                  function controlTimeSlider() {
+                    var seektime = document.getElementById("timeSilder").value
+                    player.seekTo(seektime);
+
+
+
 
                   }
 
