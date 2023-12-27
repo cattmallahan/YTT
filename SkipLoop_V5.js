@@ -341,27 +341,29 @@
                     if (section.start>difference){  
 
                       section.start = (section.start-(difference));
-                      section.end = (section.end-(difference));
                       player.seekTo(section.start);
+                      section.end = (section.end-(difference));
   
                       frombutton = section.start;
                       parsedbutton = parseFloat(frombutton);
                       frombutton = parsedbutton.toString(10);
                       document.getElementById('fromInput').value = frombutton;
                       controlFromInput(fromSlider, fromInput, toInput, toSlider);
+
+                      console.log('skipranfrombutton');
   
   
                       tobutton = section.end;
-                      parsedtobutton = parseFloat(tobutton);
-                      tobutton = parsedtobutton.toString(10);
+                      parsedbutton = parseFloat(tobutton);
+                      tobutton = parsedbutton.toString(10);
                       document.getElementById('toInput').value = tobutton;
                       controlToInput(toSlider, fromInput, toInput, toSlider);
-                      console.log('skipran');
+                      console.log('skiprantobutton');
 
 
                     } else{
                       reloadloop();
-                      console.log('skipran');
+                      console.log('skipranreload loop');
 
 
 
