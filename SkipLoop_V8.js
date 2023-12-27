@@ -325,6 +325,8 @@
 
                     }
                      clearTimeout(timeout);
+                     player.seekTo(section.start);
+
                      gettime();
 
                   
@@ -371,6 +373,8 @@
                     }
                     
                     clearTimeout(timeout);
+                    player.seekTo(section.start);
+
                     gettime();
                     
 
