@@ -392,7 +392,8 @@
 
                   function controlTimeSlider() {
                     console.log('timeslider interaction')
-                    var seektime = document.getElementById("timeSilder").value
+                    var seektime = document.getElementById("timeSlider").value;
+                    console.log(seektime);
                     player.seekTo(seektime);
 
 
