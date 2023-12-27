@@ -132,7 +132,7 @@
                       } else {
 
                       }
-                      if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
+                      if (state === 'YT.PlayerState.PLAYING' || state === 1){
                         setTimeout(gettime, 10);
 
                       }
