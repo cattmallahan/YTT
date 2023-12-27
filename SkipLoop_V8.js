@@ -111,10 +111,8 @@
                     }
 
                     function gettime() {
-                      console.log(time);
                       var time = player.playerInfo.currentTime;
                       var videolength = player.getDuration();
-                      console.log(time);
                     
                       var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
                       document.getElementById("timediv").style.left = percentprogress;
@@ -296,21 +294,21 @@
 
                     console.log('skippressed');
 
-                    if ((section.end-videolength)>difference){
+                    if ((videolength-section.end)>difference){
                   
                       section.end = ((difference)+section.end);
-                      section.start = ((difference)+section.start);
-                      player.seekTo(section.start);
-
-  
+                    
   
                       tobutton = section.end;
                       parsedtobutton = parseFloat(tobutton);
                       tobutton = parsedtobutton.toString(10);
                       document.getElementById('toInput').value = tobutton;
                       controlToInput(toSlider, fromInput, toInput, toSlider);
-  
-  
+                      console.log('skiprantobutton');
+
+
+                      section.start = ((difference)+section.start);
+                      player.seekTo(section.start);
   
   
                       frombutton = section.start;
@@ -318,20 +316,18 @@
                       frombutton = parsedbutton.toString(10);
                       document.getElementById('fromInput').value = frombutton;
                       controlFromInput(fromSlider, fromInput, toInput, toSlider);
-                      console.log('skipran');
+                      console.log('skipranfrombutton');
 
 
                     } else {
+                      reloadloop();
 
 
                     }
-                    
-                    var time = player.playerInfo.currentTime;
-                      var videolength = player.getDuration();
-                    
-                      var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
-                      document.getElementById("timediv").style.left = percentprogress;
+                     clearTimeout(timeout);
+                     gettime();
 
+                  
 
                   }
 
@@ -374,13 +370,8 @@
 
                     }
                     
-                    var time = player.playerInfo.currentTime;
-                      var videolength = player.getDuration();
-                    
-                      var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
-                      document.getElementById("timediv").style.left = percentprogress;
-
-
+                    clearTimeout(timeout);
+                    gettime();
                     
 
 
