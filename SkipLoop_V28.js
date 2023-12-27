@@ -82,7 +82,7 @@
                           'controls': 0, 
                           'rel' : 0,
                           'fs' : 0,
-                      }
+                      },
                         events: {
                           'onReady': onPlayerReady,
                           'onStateChange': onPlayerStateChange
