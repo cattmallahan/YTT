@@ -465,13 +465,7 @@
                       toSlider.value = from;
                     }
                     updatestartend(from, to);
-                    
-                    if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
-                      
-                    } else if (state === 2){
 
-                      moveplayheadwhenpaused();
-                    }
 
                   }
 
