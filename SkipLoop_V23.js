@@ -103,7 +103,6 @@
                           state = event.data;
                           console.log(state);
                           player.setPlaybackRate(rate);     // choose .25, .50, .75, or 1
-                          var duration = (section.end - section.start)/(rate) + difference;
                           gettime();
                           
                       } else {
@@ -290,8 +289,9 @@
                     document.getElementById('fromInput').max = videolength;
                     document.getElementById('fromSlider').value = 0;
                     document.getElementById('fromInput').value = 0;
-                    controlFromSliderkeepplaying(fromSlider, toSlider, fromInput);
                     document.getElementById('timeSlider').max = videolength;
+
+                    controlFromSliderkeepplaying(fromSlider, toSlider, fromInput);
 
                     loopstate = 2;
                   }
@@ -478,7 +478,6 @@
                       
                    // } else if (state === 2){
 
-                      moveplayheadwhenpaused();
                     
                  }
 
