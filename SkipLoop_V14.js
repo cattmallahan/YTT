@@ -324,13 +324,7 @@
 
 
                     }
-                     clearTimeout(timeout);
-                     player.seekTo(section.start);
-
-                     var time = section.start;
-                     var videolength = player.getDuration();
-                     var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
-                     document.getElementById("timediv").style.left = percentprogress;
+                    moveplayheadwhenpaused();
 
                   
 
@@ -375,20 +369,22 @@
 
                     }
                     
-                    clearTimeout(timeout);
-                    player.seekTo(section.start);
-
-
-
-                    var time = section.start;
-                    var videolength = player.getDuration();
-                    var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
-                    document.getElementById("timediv").style.left = percentprogress;                    
+                    moveplayheadwhenpaused();                 
 
 
                   }
 
 
+                  function moveplayheadwhenpaused(){
+
+                    clearTimeout(timeout);
+                    player.seekTo(section.start);
+                    var time = section.start;
+                    var videolength = player.getDuration();
+                    var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
+                    document.getElementById("timediv").style.left = percentprogress;   
+
+                  }
 
 
             
@@ -429,6 +425,13 @@
                       fromInput.value = from;
                     }
                     updatestartend(from, to);
+
+                    if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
+                      
+                    } else if (state === 2){
+
+                      moveplayheadwhenpaused();
+                    }
                   }
 
                   function controlFromSliderkeepplaying(fromSlider, toSlider, fromInput) {
@@ -441,6 +444,13 @@
                       fromInput.value = from;
                     }
                     updatestartendkeepplaying(from, to);
+
+                    if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
+                      
+                    } else if (state === 2){
+
+                      moveplayheadwhenpaused();
+                    }
                   }
 
                   function controlToSlider(fromSlider, toSlider, toInput) {
@@ -455,6 +465,13 @@
                       toSlider.value = from;
                     }
                     updatestartend(from, to);
+                    
+                    if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
+                      
+                    } else if (state === 2){
+
+                      moveplayheadwhenpaused();
+                    }
 
                   }
 
