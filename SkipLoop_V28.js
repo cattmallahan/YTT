@@ -1,8 +1,8 @@
 //OK go - this too shall pass - 23.14  28.79
 
                   var section = {
-                    start: 23.14,
-                    end: 28.81,}
+                    start: 0,
+                    end: 234,}
                   let timeout;
                   let pos;
                   var bpm = 0;
