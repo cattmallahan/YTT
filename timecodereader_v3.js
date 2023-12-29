@@ -125,7 +125,11 @@
                       var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
                       document.getElementById("timediv").style.left = percentprogress;
                       document.getElementById("timeSlider").value = time;
-                      document.getElementById("currenttimedisplay").value = secondtotime(time);
+                      var date = new Date(0);
+                      date.setSeconds(time); // specify value for SECONDS here
+                      var timeString = date.toISOString().substring(11, 19);
+                      document.getElementById("currenttimedisplay").value = timeString;
+
 
                       if (time >= section.end ){
                         console.log('restarttriggered');
@@ -262,7 +266,13 @@
                     document.getElementById('fromSlider').max = videolength;
                     document.getElementById('fromInput').max = videolength;
                     document.getElementById('timeSlider').max = videolength;
-                    document.getElementById('durationdisplay').value = durationsecondtotime(videolength);
+                    var date = new Date(0);
+                      date.setSeconds(videolength); // specify value for SECONDS here
+                      var timeString = date.toISOString().substring(11, 19);
+                      document.getElementById('durationdisplay').value = timeString;
+
+
+                    
                   }
 
 
@@ -796,7 +806,6 @@
                   var date = new Date(0);
                   date.setSeconds(time); // specify value for SECONDS here
                   var timeString = date.toISOString().substring(11, 19);
-                  console.log(timeString);
                   return timeString;
                   
 
@@ -807,7 +816,6 @@
                   var date = new Date(0);
                   date.setSeconds(videolength); // specify value for SECONDS here
                   var timeString = date.toISOString().substring(11, 19);
-                  console.log(timeString);
                   return timeString;
                   
 
