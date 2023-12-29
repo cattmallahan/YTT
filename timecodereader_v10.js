@@ -48,7 +48,7 @@
 
                   })
 
-                  document.addEventListener("DOMContentLoaded", updatedurationtimecode () {
+                  document.addEventListener("DOMContentLoaded", updatedurationtimecode() {
                     var videolength = player.getDuration();
                     var date2 = new Date(0);
                       date2.setSeconds(videolength); // specify value for SECONDS here
