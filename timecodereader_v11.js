@@ -115,6 +115,8 @@
                           console.log(state);
                           player.setPlaybackRate(rate);     // choose .25, .50, .75, or 1
                           gettime();
+                          getduration();
+
 
                           var videolength = player.getDuration();
                           var date2 = new Date(0);
