@@ -129,7 +129,7 @@
                       date.setSeconds(time); // specify value for SECONDS here
                       var timeString = date.toISOString().substring(11, 19);
                       console.log(timeString);
-                      document.getElementById("currenttimedisplay").value = timeString;
+                      document.getElementById("currenttimedisplay").innerHTML = timeString;
 
 
                       if (time >= section.end ){
@@ -271,7 +271,7 @@
                       date.setSeconds(videolength); // specify value for SECONDS here
                       var timeString = date.toISOString().substring(11, 19);
                       console.log(timeString);
-                      document.getElementById('durationdisplay').value = timeString;
+                      document.getElementById('durationdisplay').innerHTML = timeString;
 
 
                     
