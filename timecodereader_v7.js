@@ -102,6 +102,8 @@
                           document.getElementById('bpm').innerHTML = bpm;
                           fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                           asyncCall2();
+                          getduration();
+
 
                       }
 
@@ -111,6 +113,7 @@
                           console.log(state);
                           player.setPlaybackRate(rate);     // choose .25, .50, .75, or 1
                           gettime();
+
                           
                       } else {
                           state = event.data;
