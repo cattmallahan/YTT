@@ -128,7 +128,6 @@
                       var date = new Date(0);
                       date.setSeconds(time); // specify value for SECONDS here
                       var timeString = date.toISOString().substring(11, 19);
-                      console.log(timeString);
                       document.getElementById("currenttimedisplay").innerHTML = timeString;
 
 
@@ -267,11 +266,11 @@
                     document.getElementById('fromSlider').max = videolength;
                     document.getElementById('fromInput').max = videolength;
                     document.getElementById('timeSlider').max = videolength;
-                    var date = new Date(0);
-                      date.setSeconds(videolength); // specify value for SECONDS here
-                      var timeString = date.toISOString().substring(11, 19);
-                      console.log(timeString);
-                      document.getElementById('durationdisplay').innerHTML = timeString;
+                    var date2 = new Date(0);
+                      date2.setSeconds(videolength); // specify value for SECONDS here
+                      var timeString2 = date2.toISOString().substring(11, 19);
+                      console.log(timeString2);
+                      document.getElementById('durationdisplay').innerHTML = timeString2;
 
 
                     
