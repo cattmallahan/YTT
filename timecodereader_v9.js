@@ -48,6 +48,16 @@
 
                   })
 
+                  document.addEventListener("DOMContentLoaded", updatedurationtimecode () {
+                    var videolength = player.getDuration();
+                    var date2 = new Date(0);
+                      date2.setSeconds(videolength); // specify value for SECONDS here
+                      var timeString2 = date2.toISOString().substring(11, 19);
+                      console.log(timeString2);
+                      document.getElementById('durationdisplay').innerHTML = timeString2;
+
+                  });
+
 
                   fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                   setToggleAccessible(toSlider);
@@ -267,15 +277,7 @@
                     document.getElementById('fromSlider').max = videolength;
                     document.getElementById('fromInput').max = videolength;
                     document.getElementById('timeSlider').max = videolength;
-                    console.log('getduration ran')
-                    var date2 = new Date(0);
-                      date2.setSeconds(videolength); // specify value for SECONDS here
-                      var timeString2 = date2.toISOString().substring(11, 19);
-                      console.log(timeString2);
-                      document.getElementById('durationdisplay').innerHTML = timeString2;
-
-
-                    
+            
                   }
 
 
