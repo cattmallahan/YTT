@@ -22,6 +22,7 @@
                   var endURL = section.end;
                   let infiniteloop = 1;
                   let countdown = 1;
+                  let count = 3;
 
                   document.addEventListener('keydown', event => {
                     if (event.code === 'KeyS'){
@@ -302,18 +303,53 @@
                     }
                   }
 
-                    function playbutton() {
-                          player.playVideo();
-                         // player.seekTo(section.start);
-                        //  var duration = (section.end - section.start)/(rate) + difference;
-                         // clearTimeout(timeout);
 
-                    //  timeout = setTimeout(restartVideoSection, duration * 1000);
+                  function resolve1Second() {
+                    return new Promise(resolve => {
+                      setTimeout(() => {
+                        resolve('test');
+                      }, 1000);
+                    });
+                  }
+
+           async function asyncCall3() {
+                    console.log('calling1second');
+                    const result = await resolve1Second();
+                    // expected output: "resolved"
+                    playbutton();
+                  }
+
+
+                    function playbutton() {
+                      if (countdown == 2 && count == 3 || count == 2 || count == 1 ) {
+
+                        //write countdown script here
+                        //start asynch timer
+                        //show hidden number element
+                        document.getElementById('countdiv').opacity= '100%';
+                        document.getElementById('countdiv').innerHTML=count;
+                        count = count-1;
+                        asyncCall3();
+
+                        //switch from 1,2,3,go
+                        //hide hideen number element
+                        //asycnh timer calls playvideo
+
+
+                      } else {
+                        document.getElementById('countdiv').opacity= '0%';
+
+
+                        player.playVideo();
+                        count = 3
+
+                      }
+
+                       
                       }
 
                     function pausebutton() {
                           player.pauseVideo();
-                         // clearTimeout(timeout);
                       }
 
 
@@ -784,6 +820,12 @@
                     playbutton();
                     // expected output: "resolved"
                   }
+
+
+
+
+
+
 
                   function resetstart() {
                     console.log(player.playerInfo.currentTime);
