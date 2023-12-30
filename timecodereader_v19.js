@@ -326,7 +326,7 @@
                         //write countdown script here
                         //start asynch timer
                         //show hidden number element
-                        document.getElementById('countdiv').opacity= '100%';
+                        document.getElementById('countdiv')style.opacity = 1;
                         document.getElementById('countdiv').innerHTML=count;
                         count = count-1;
                         asyncCall3();
@@ -337,8 +337,7 @@
 
 
                       } else {
-                        document.getElementById('countdiv').opacity= '0%';
-
+                        document.getElementById('countdiv')style.opacity = 0;
 
                         player.playVideo();
                         count = 3
