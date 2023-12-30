@@ -20,6 +20,7 @@
                   let loopstate = 1;
                   var startURL = section.start;
                   var endURL = section.end;
+                  let infitineloop = 1;
 
                   document.addEventListener('keydown', event => {
                     if (event.code === 'KeyS'){
@@ -150,6 +151,7 @@
                        
                         restartVideoSection();
                       } else {
+                        
 
                       }
                       if (state === 'YT.PlayerState.PLAYING' || state === 1){
@@ -250,10 +252,33 @@
                   }
 
                   function restartVideoSection() {
-                    player.seekTo(section.start);
+
+                    if (infitineloop == 1) {
+                      player.seekTo(section.start);
+                    } else {
+                      player.seekTo(section.start);
+                      player.pauseVideo();
+                    }
                     //var duration = (section.end - section.start)/(rate) + difference;
                       //clearTimeout(timeout);
                      // timeout = setTimeout(restartVideoSection, duration * 1000);
+                  }
+
+                  function switchinfiniteloop(){
+                    if (infitineloop == 1) {
+                      infitineloop = 2;
+                      document.getElementById("infinitecontrols").src="https://i.postimg.cc/x1HNpv4t/infinty.png";
+
+
+
+                    } else {
+                      infitineloop = 1;
+                      document.getElementById("infinitecontrols").src="https://i.postimg.cc/tgbGQ6XX/oneplay2.png";
+
+                    }
+
+
+
                   }
 
                     function playbutton() {
