@@ -971,8 +971,36 @@
                 }
 
                 function gostart(){
-                  player.seekTo(section.start);
-                  document.getElementById("timeSlider").value = section.start;
+
+
+                  if (countdown == 2 && count == 3 || count == 2 || count == 1) {
+                    player.pauseVideo();
+                    player.seekTo(section.start);
+                    document.getElementById("timeSlider").value = section.start;
+
+                    console.log(count);
+                    document.getElementById('countdiv').style.opacity = '1';
+                    document.getElementById('countdiv').innerHTML=count;
+                    count = count-1;
+                    asyncCall3();
+
+                    //switch from 1,2,3,go
+                    //hide hideen number element
+                    //asycnh timer calls playvideo
+
+
+                  } else {
+                    document.getElementById('countdiv').style.opacity = 0;
+
+                    player.playVideo();
+                    count = 3
+                    document.getElementById("timeSlider").value = section.start;
+
+
+                  }
+
+
+                  
 
 
                 }
