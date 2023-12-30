@@ -931,7 +931,7 @@
 
                 function durationsecondtotime(videolength){
                   var date = new Date(0);
-                  date.setSeconds(videolength); // specify value for SECONDS here
+                  date.setMilliseconds(videolength*1000); // specify value for SECONDS here
                   var timeString = date.toISOString().substring(11, 19);
                   return timeString;
                   
