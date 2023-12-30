@@ -972,6 +972,7 @@
 
                 function gostart(){
                   player.seekTo(section.start);
+                  document.getElementById("timeSlider").value = section.start;
 
 
                 }
