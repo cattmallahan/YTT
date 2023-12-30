@@ -338,7 +338,7 @@
 
 
                       } else {
-                        document.getElementById('countdiv')style.opacity = 0;
+                        document.getElementById('countdiv').style.opacity = 0;
 
                         player.playVideo();
                         count = 3
