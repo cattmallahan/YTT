@@ -992,8 +992,10 @@
                   } else {
                     document.getElementById('countdiv').style.opacity = 0;
 
-                    player.playVideo();
+                    
                     count = 3
+                    player.seekTo(section.start);
+
                     document.getElementById("timeSlider").value = section.start;
 
 
