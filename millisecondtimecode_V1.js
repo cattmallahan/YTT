@@ -944,8 +944,14 @@
 
 
                 function addmillisecond(){
-                  document.getElementById('starttimecodemilli').innerHTML = (section.start + "").split(".")[1];
-                  document.getElementById('endtimecodemilli').innerHTML = (section.end + "").split(".")[1];
+                  let startmilli = (section.start + "").split(".")[1];
+                  let endmilli = (section.end + "").split(".")[1];
+                  let sm = '.' + startmilli.substring(0, 2);
+                  let em = '.' + endmilli.substring(0, 2);
+
+
+                  document.getElementById('starttimecodemilli').innerHTML = sm;
+                  document.getElementById('endtimecodemilli').innerHTML = em;
 
 
 
