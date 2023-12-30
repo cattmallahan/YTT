@@ -411,6 +411,7 @@
                     controlFromSliderkeepplaying(fromSlider, toSlider, fromInput);
 
                     loopstate = 2;
+                    section.start = 0;
                     updatelooptimedivs();
                     addmillisecond();
 
