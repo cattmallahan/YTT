@@ -406,12 +406,14 @@
                     document.getElementById('fromSlider').value = 0;
                     document.getElementById('fromInput').value = 0;
                     document.getElementById('timeSlider').max = videolength;
-                    document.getElementById('starttimecode').innerHTML = secondtotime(section.start);
-                    addmillisecond();
+
 
                     controlFromSliderkeepplaying(fromSlider, toSlider, fromInput);
 
                     loopstate = 2;
+                    updatelooptimedivs();
+                    addmillisecond();
+
                   }
 
 
@@ -684,13 +686,14 @@
                   function updatestartendkeepplaying(from, to) {
                       section.start = from;
                       section.end = to;
-                      updatelooptimedivs();
 
 
                       //var duration = (section.end - section.start)/(rate) + difference;
                     //  clearTimeout(timeout);
 
                       fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
+                      updatelooptimedivs();
+
 
 
 
