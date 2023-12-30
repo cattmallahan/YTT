@@ -361,6 +361,7 @@
                     document.getElementById('fromSlider').max = videolength;
                     document.getElementById('fromInput').max = videolength;
                     document.getElementById('timeSlider').max = videolength;
+                    document.getElementById('starttimecode').innerHTML = secondtotime(videolength);
             
                   }
 
