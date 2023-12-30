@@ -102,7 +102,7 @@
                           getduration();
                           checkpositive();
                           gettime();
-                          playbutton();
+                          player.playVideo();
                           document.getElementById('bpm').innerHTML = bpm;
                           fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                           asyncCall2();
@@ -321,7 +321,7 @@
 
 
                     function playbutton() {
-                      if (countdown == 2 && count == 3 || count == 2 || count == 1 ) {
+                      if (countdown == 2 && count == 3 || count == 2 || count == 1) {
 
                         //write countdown script here
                         //start asynch timer
