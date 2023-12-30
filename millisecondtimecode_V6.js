@@ -586,15 +586,15 @@
                     }
                     updatestartend(from, to);
 
-                    if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
+                   // if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
                       moveplayheadwhenpaused();
 
                       
                       
-                    } else if (state === 2){
+                   // } else if (state === 2){
 
-                      moveplayheadwhenpaused();
-                    }
+                    //  moveplayheadwhenpaused();
+                   // }
                   }
 
                   function controlFromSliderkeepplaying(fromSlider, toSlider, fromInput) {
