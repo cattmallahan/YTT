@@ -267,13 +267,13 @@
                   function switchinfiniteloop(){
                     if (infitineloop == 1) {
                       infitineloop = 2;
-                      document.getElementById("infinitecontrols").src="https://i.postimg.cc/x1HNpv4t/infinty.png";
+                      document.getElementById("infinitecontrols").src="https://i.postimg.cc/x1HNpv4t/infinty.png?random="+new Date().getTime();
 
 
 
                     } else {
                       infitineloop = 1;
-                      document.getElementById("infinitecontrols").src="https://i.postimg.cc/tgbGQ6XX/oneplay2.png";
+                      document.getElementById("infinitecontrols").src="https://i.postimg.cc/tgbGQ6XX/oneplay2.png?random="+new Date().getTime();
 
                     }
 
