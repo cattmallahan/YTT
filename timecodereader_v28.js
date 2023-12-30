@@ -361,7 +361,9 @@
                     document.getElementById('fromSlider').max = videolength;
                     document.getElementById('fromInput').max = videolength;
                     document.getElementById('timeSlider').max = videolength;
-                    document.getElementById('starttimecode').innerHTML = secondtotime(videolength);
+                    document.getElementById('endtimecode').innerHTML = secondtotime(videolength);
+                    document.getElementById('starttimecode').innerHTML = secondtotime(section.start);
+
             
                   }
 
@@ -381,6 +383,9 @@
                     document.getElementById('fromInput').max = videolength;
                     document.getElementById('fromSlider').value = 0;
                     document.getElementById('fromInput').value = 0;
+                    document.getElementById('endtimecode').innerHTML = secondtotime(videolength);
+                    document.getElementById('starttimecode').innerHTML = secondtotime(section.start);
+
               
                     controlFromSlider(fromSlider, toSlider, fromInput);
                     document.getElementById('timeSlider').max = videolength;
@@ -400,6 +405,7 @@
                     document.getElementById('fromSlider').value = 0;
                     document.getElementById('fromInput').value = 0;
                     document.getElementById('timeSlider').max = videolength;
+                    document.getElementById('starttimecode').innerHTML = secondtotime(section.start);
 
                     controlFromSliderkeepplaying(fromSlider, toSlider, fromInput);
 
@@ -526,6 +532,12 @@
 
                   }
 
+                  function updatelooptimedivs() {
+
+                    document.getElementById('endtimecode').innerHTML = secondtotime(section.end);
+                    document.getElementById('starttimecode').innerHTML = secondtotime(section.start);
+                  }
+
 
             
 
@@ -540,6 +552,7 @@
                           fromSlider.value = from;
                       }
                       updatestartend(from, to);
+                      
                   }
 
                   function controlToInput(toSlider, fromInput, toInput, controlSlider) {
@@ -657,6 +670,7 @@
                      // clearTimeout(timeout);
                      // timeout = setTimeout(restartVideoSection, duration * 1000);
                       fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
+                      updatelooptimedivs();
 
 
 
@@ -665,6 +679,9 @@
                   function updatestartendkeepplaying(from, to) {
                       section.start = from;
                       section.end = to;
+                      updatelooptimedivs();
+
+
                       //var duration = (section.end - section.start)/(rate) + difference;
                     //  clearTimeout(timeout);
 
@@ -870,6 +887,7 @@
                     toInput.value = section.end;
                     fromSlider.value = section.start;
                     fromInput.value = section.start;
+                    updatelooptimedivs();
 
 
                   }
