@@ -552,6 +552,7 @@
                           fromSlider.value = from;
                       }
                       updatestartend(from, to);
+
                       
                   }
 
@@ -566,6 +567,7 @@
                           toInput.value = from;
                       }
                       updatestartend(from, to);
+\
                   }
 
                   function controlFromSlider(fromSlider, toSlider, fromInput) {
@@ -920,7 +922,7 @@
                 function secondtotime(time){
                   var date = new Date(0);
                   date.setSeconds(time); // specify value for SECONDS here
-                  var timeString = date.toISOString().substring(11, 21);
+                  var timeString = date.toISOString().substring(11, 22);
                   return timeString;
                   
 
