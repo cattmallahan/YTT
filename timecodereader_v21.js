@@ -327,7 +327,7 @@
                         //start asynch timer
                         //show hidden number element
                         console.log(count);
-                        document.getElementById('countdiv')style.opacity = '1';
+                        document.getElementById('countdiv').style.opacity = '1';
                         document.getElementById('countdiv').innerHTML=count;
                         count = count-1;
                         asyncCall3();
