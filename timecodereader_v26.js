@@ -20,7 +20,7 @@
                   let loopstate = 1;
                   var startURL = section.start;
                   var endURL = section.end;
-                  let infiniteloop = 1;
+                  let infiniteloop = 2;
                   let countdown = 1;
                   let count = 3;
 
