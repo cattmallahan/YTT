@@ -270,14 +270,14 @@
                     if (infiniteloop == 1) {
                       infiniteloop = 2;
                       console.log(infiniteloop)
-                      document.getElementById('infinitecontrols').src="https://i.postimg.cc/x1HNpv4t/infinty.png?random="+new Date().getTime();
+                      document.getElementById('infinitecontrols').src="https://i.postimg.cc/FsDfqLw3/infinitered.png?random="+new Date().getTime();
 
 
 
                     } else {
                       infiniteloop = 1;
                       console.log(infiniteloop)
-                      document.getElementById('infinitecontrols').src="https://i.postimg.cc/tgbGQ6XX/oneplay2.png?random="+new Date().getTime();
+                      document.getElementById('infinitecontrols').src="https://i.postimg.cc/t4csRHqg/infinitegrey.png?random="+new Date().getTime();
 
                     }
 
