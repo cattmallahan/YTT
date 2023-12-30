@@ -20,7 +20,7 @@
                   let loopstate = 1;
                   var startURL = section.start;
                   var endURL = section.end;
-                  let infitineloop = 1;
+                  let infiniteloop = 1;
 
                   document.addEventListener('keydown', event => {
                     if (event.code === 'KeyS'){
@@ -253,7 +253,7 @@
 
                   function restartVideoSection() {
 
-                    if (infitineloop == 1) {
+                    if (infiniteloop == 1) {
                       player.seekTo(section.start);
                     } else {
                       player.seekTo(section.start);
@@ -265,15 +265,18 @@
                   }
 
                   function switchinfiniteloop(){
-                    if (infitineloop == 1) {
-                      infitineloop = 2;
-                      document.getElementById("infinitecontrols").src="https://i.postimg.cc/x1HNpv4t/infinty.png?random="+new Date().getTime();
+                    console.log('infinity clicked')
+                    if (infiniteloop == 1) {
+                      infiniteloop = 2;
+                      console.log(infiniteloop)
+                      document.getElementById('infinitecontrols').src="https://i.postimg.cc/x1HNpv4t/infinty.png?random="+new Date().getTime();
 
 
 
                     } else {
-                      infitineloop = 1;
-                      document.getElementById("infinitecontrols").src="https://i.postimg.cc/tgbGQ6XX/oneplay2.png?random="+new Date().getTime();
+                      infiniteloop = 1;
+                      console.log(infiniteloop)
+                      document.getElementById('infinitecontrols').src="https://i.postimg.cc/tgbGQ6XX/oneplay2.png?random="+new Date().getTime();
 
                     }
 
