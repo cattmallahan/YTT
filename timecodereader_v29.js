@@ -670,6 +670,7 @@
                      // clearTimeout(timeout);
                      // timeout = setTimeout(restartVideoSection, duration * 1000);
                       fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
+                      updatelooptimedivs();
 
 
 
@@ -678,6 +679,7 @@
                   function updatestartendkeepplaying(from, to) {
                       section.start = from;
                       section.end = to;
+                      updatelooptimedivs();
 
 
                       //var duration = (section.end - section.start)/(rate) + difference;
@@ -885,6 +887,7 @@
                     toInput.value = section.end;
                     fromSlider.value = section.start;
                     fromInput.value = section.start;
+                    updatelooptimedivs();
 
 
                   }
