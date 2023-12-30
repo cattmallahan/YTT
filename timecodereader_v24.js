@@ -105,7 +105,6 @@
                           player.playVideo();
                           document.getElementById('bpm').innerHTML = bpm;
                           fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
-                          reloadloop();
                           asyncCall2();
 
  
@@ -819,6 +818,7 @@
                     console.log('calling1second');
                     const result = await resolveAfter1Second();
                     playbutton();
+                    reloadloop();
                     // expected output: "resolved"
                   }
 
