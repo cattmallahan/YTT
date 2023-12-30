@@ -920,7 +920,7 @@
                 function secondtotime(time){
                   var date = new Date(0);
                   date.setSeconds(time); // specify value for SECONDS here
-                  var timeString = date.toISOString().substring(11, 19);
+                  var timeString = date.toISOString().substring(11, 21);
                   return timeString;
                   
 
