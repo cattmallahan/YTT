@@ -512,7 +512,7 @@
                     var videolength = player.getDuration();
                     var percentprogress = Number(time/videolength).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
                     document.getElementById("timediv").style.left = percentprogress;
-                    document.getElementById("timeSlider").value = time;   
+                    document.getElementById("timeSlider").value = section.start;   
 
 
                   }
@@ -587,6 +587,8 @@
                     updatestartend(from, to);
 
                     if (state === 'YT.PlayerState.PLAYING' || state === 1 || state === 3){
+                      moveplayheadwhenpaused();
+
                       
                       
                     } else if (state === 2){
