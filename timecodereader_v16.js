@@ -21,6 +21,7 @@
                   var startURL = section.start;
                   var endURL = section.end;
                   let infiniteloop = 1;
+                  let countdown = 1;
 
                   document.addEventListener('keydown', event => {
                     if (event.code === 'KeyS'){
@@ -282,6 +283,23 @@
 
 
 
+                  }
+
+                  function switchcountdown(){
+                    console.log('countdown clicked')
+                    if (countdown == 1) {
+                      countdown = 2;
+                      console.log(countdown)
+                      document.getElementById('countdown').src="https://i.postimg.cc/05mwf6t8/countdown.png?random="+new Date().getTime();
+
+
+                      
+                    } else {
+                      countdown = 1;
+                      console.log(countdown)
+                      document.getElementById('countdown').src="https://i.postimg.cc/FRS7DqVP/countdowngrey.png?random="+new Date().getTime();
+
+                    }
                   }
 
                     function playbutton() {
