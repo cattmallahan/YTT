@@ -105,6 +105,7 @@
                           player.playVideo();
                           document.getElementById('bpm').innerHTML = bpm;
                           fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
+                          reloadloop();
                           asyncCall2();
 
  
