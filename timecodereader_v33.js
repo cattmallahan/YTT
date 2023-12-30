@@ -567,7 +567,7 @@
                           toInput.value = from;
                       }
                       updatestartend(from, to);
-\
+
                   }
 
                   function controlFromSlider(fromSlider, toSlider, fromInput) {
