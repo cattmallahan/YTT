@@ -253,7 +253,7 @@
 
                   function restartVideoSection() {
 
-                    if (infiniteloop == 1) {
+                    if (infiniteloop == 2) {
                       player.seekTo(section.start);
                     } else {
                       player.seekTo(section.start);
