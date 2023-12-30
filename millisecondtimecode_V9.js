@@ -949,13 +949,21 @@
 
 
                 function addmillisecond(){
-                  let startmilli = (section.start + "").split(".")[1];
+
+                  if(section.start>0){
+                    let startmilli = (section.start + "").split(".")[1];
+                    let sm = '.' + startmilli.substring(0, 2);
+                    document.getElementById('starttimecodemilli').innerHTML = sm;
+
+                  } else {
+                    document.getElementById('starttimecodemilli').innerHTML = '.00';
+
+
+                  }
+                  
                   let endmilli = (section.end + "").split(".")[1];
-                  let sm = '.' + startmilli.substring(0, 2);
                   let em = '.' + endmilli.substring(0, 2);
 
-
-                  document.getElementById('starttimecodemilli').innerHTML = sm;
                   document.getElementById('endtimecodemilli').innerHTML = em;
 
 
