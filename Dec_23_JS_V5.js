@@ -23,6 +23,7 @@
                   let infiniteloop = 2;
                   let countdown = 1;
                   let count = 3;
+                  let volume = 100;
 
                   document.addEventListener('keydown', event => {
                     if (event.code === 'KeyS'){
@@ -1003,6 +1004,13 @@
 
 
                   
+
+
+                }
+
+                function setvolume(){
+                  volume = document.getElementById("timeSlider").value;
+                  player.setVolume(volume);
 
 
                 }
