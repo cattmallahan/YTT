@@ -1010,7 +1010,9 @@
 
                 function setvolume(){
                   volume = document.getElementById("timeSlider").value;
-                  player.setVolume(volume);
+                  parsedvolume = parseFloat(volume);
+                  console.log(parsedvolume);
+                  player.setVolume(parsedvolume);
 
 
                 }
