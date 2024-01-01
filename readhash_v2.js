@@ -96,7 +96,7 @@
                   }
                     function onPlayerReady(event) {
                           urlreader();
-                          readhash();
+                          
 
                           player.seekTo(section.start);
                           getduration();
@@ -106,6 +106,7 @@
                           document.getElementById('bpm').innerHTML = bpm;
                           fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                           asyncCall2();
+                          readhash();
 
  
 
