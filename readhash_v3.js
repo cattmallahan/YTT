@@ -1010,9 +1010,12 @@
                 
                 
                 function readhash() {
+                  console.log('readhashran');
+
                 var myHash = location.hash;
                 myHash2 = myHash.substring(1, myHash.length);
                 var params = myHash2.split('&');
+                console.log(params);
                 newID = params[0];
                 section.start = Number(params[1]);
                 section.end = Number(params[2]);
