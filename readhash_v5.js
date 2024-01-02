@@ -94,11 +94,17 @@
                       }
                     );
                   }
-                    function onPlayerReady(event) {                          
-                          readhash();
+                    function onPlayerReady(event) {
+                         // urlreader();
+                         readhash();
+
+                          
+
+                         // player.seekTo(section.start);
                           getduration();
                           checkpositive();
                           gettime();
+                          //player.playVideo();
                           document.getElementById('bpm').innerHTML = bpm;
                           fillSlider(fromSlider, toSlider, '#C1C1C1', '#EB3323', toSlider);
                           asyncCall2();
@@ -1005,12 +1011,17 @@
                 
                 
                 function readhash() {
-                  console.log('readhashran');
+                console.log('readhashran');
 
                 var myHash = location.hash;
                 myHash2 = myHash.substring(1, myHash.length);
                 var params = myHash2.split('&');
                 console.log(params);
+
+                if (params[0] == ""){
+
+
+                }else {  
                 newID = params[0];
                 section.start = Number(params[1]);
                 section.end = Number(params[2]);
@@ -1035,6 +1046,10 @@
 
                     controlFromSliderkeepplaying(fromSlider, toSlider, fromInput);
                     updatelooptimedivs();
+
+
+                }
+                
 
               
                 }
