@@ -1044,8 +1044,9 @@
                     document.getElementById('timeSlider').max = videolength;
 
 
-                    controlFromSliderkeepplaying(fromSlider, toSlider, fromInput);
+                    controlFromSliderkeepplaying(section.start, section.end, fromInput);
                     updatelooptimedivs();
+                    
 
 
                 }
