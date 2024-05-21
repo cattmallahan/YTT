@@ -543,7 +543,7 @@
                     document.getElementById('endtimecode').innerHTML = secondtotime(section.end);
                     document.getElementById('starttimecode').innerHTML = secondtotime(section.start);
                     addmillisecond();
-                    writestartendtourl();
+                    //writestartendtourl();
                   }
 
 
